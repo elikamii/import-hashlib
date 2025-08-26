@@ -5,7 +5,7 @@ def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
 def create_user(username, password, users_db):
-    """Creates a new user and adds them to a database dictionary."""
+    """Creates a new user and adds abase dictionary."""
     if username in users_db:
         return "Error: Username already exists."
     users_db[username] = hash_password(password)
